@@ -9,6 +9,7 @@ import { LoadingController } from "@ionic/angular";
 })
 export class BpegmPage implements OnInit {
   isFilter: boolean = false;
+  istrue: boolean = true;
   post = [];
   loading;
   classList = [];
