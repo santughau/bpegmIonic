@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { BpegmServiceService } from "src/app/shared/bpegm-service.service";
 import { LoadingController } from "@ionic/angular";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-bpegm",
@@ -9,7 +10,6 @@ import { LoadingController } from "@ionic/angular";
 })
 export class BpegmPage implements OnInit {
   isFilter: boolean = false;
-  istrue: boolean = true;
   post = [];
   loading;
   classList = [];
@@ -17,7 +17,8 @@ export class BpegmPage implements OnInit {
   filterData = [];
   constructor(
     private service: BpegmServiceService,
-    public loadingController: LoadingController
+    public loadingController: LoadingController,
+    private router: Router
   ) {
     this.loadData(null);
     this.service.getClass().subscribe((clas) => {
@@ -63,5 +64,9 @@ export class BpegmPage implements OnInit {
 
       this.loadingController.dismiss();
     });
+  }
+
+  goToDetailsPage(item) {
+    this.router.navigate(["/bpegm-details"]);
   }
 }

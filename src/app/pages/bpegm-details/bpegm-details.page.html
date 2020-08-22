@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details Page </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="brder">
+    <ion-card-header color="success">
+      <ion-card-title>या माहितीचे निर्माते </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <img src="http://bpegm.in/images/{{singleUSer?.uploaderimage}}" />
+          </ion-col>
+          <ion-col size="9">
+            <ion-text color="dark">
+              <h5 class="txtCenter">singleUSer?.uploadername | json</h5>
+            </ion-text>
+            <ion-text color="dark">
+              <h6 class="txt">
+                singleUSer?.uploaderschoolName
+              </h6>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="bkColor">
+    <ion-card-header>
+      <ion-card-title class="titleClass"
+        >Santosh Ashokrao Sontakke</ion-card-title
+      >
+      <hr />
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile, and
+      climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" fill="outline" color="primary"
+    >Share On Whatsapp</ion-button
+  >
+</ion-content>

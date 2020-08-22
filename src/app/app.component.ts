@@ -22,6 +22,16 @@ export class AppComponent implements OnInit {
       url: "/bpegm",
       icon: "mail",
     },
+    {
+      title: "Youtube Videos",
+      url: "/youtube",
+      icon: "videocam",
+    },
+    {
+      title: "शासकिय  निंर्णय ",
+      url: "/gr",
+      icon: "document",
+    },
   ];
   public labels = ["Family", "Friends", "Notes", "Work", "Travel", "Reminders"];
 

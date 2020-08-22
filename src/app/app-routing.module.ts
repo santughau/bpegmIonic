@@ -17,6 +17,18 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/home/home.module").then((m) => m.HomePageModule),
   },
+  {
+    path: 'bpegm-details',
+    loadChildren: () => import('./pages/bpegm-details/bpegm-details.module').then( m => m.BpegmDetailsPageModule)
+  },
+  {
+    path: 'youtube',
+    loadChildren: () => import('./pages/youtube/youtube.module').then( m => m.YoutubePageModule)
+  },
+  {
+    path: 'gr',
+    loadChildren: () => import('./pages/gr/gr.module').then( m => m.GrPageModule)
+  },
 ];
 
 @NgModule({

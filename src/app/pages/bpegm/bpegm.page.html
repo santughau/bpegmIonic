@@ -45,7 +45,7 @@
   </ion-item>
 
   <ion-list>
-    <ion-item *ngFor="let item of post">
+    <ion-item *ngFor="let item of post" (click)="goToDetailsPage(item)">
       <ion-avatar slot="start">
         <img
           src="http://bpegm.in/images/{{item.uploaderimage}}"
