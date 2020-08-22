@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>BPEGM EXAMS</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button *ngIf="!isFilter" (click)="changeFilter()">
+        वर्ग व विषयानुसार शोध
+      </ion-button>
+      <ion-button *ngIf="isFilter" (click)="changeFilter()">
+        संपूर्ण यादी नुसार पहा
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngIf="isFilter">
+    <ion-label>वर्ग निवडा </ion-label>
+    <ion-select
+      placeholder="पहिला "
+      mode="ios"
+      interface="popover"
+      (ionChange)="classSelected($event)"
+    >
+      <ion-select-option *ngFor="let item of classList" value="{{item.id}}"
+        >{{item.className}}</ion-select-option
+      >
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngIf="isFilter">
+    <ion-label>विषय निवडा </ion-label>
+    <ion-select
+      placeholder="मराठी  "
+      mode="ios"
+      interface="popover"
+      (ionChange)="subjectSelected($event)"
+    >
+      <ion-select-option *ngFor="let item of subject" value="{{item.id}}"
+        >{{item.subjectName}}</ion-select-option
+      >
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let item of post">
+      <ion-avatar slot="start">
+        <img
+          src="http://bpegm.in/images/{{item.uploaderimage}}"
+          class="imgClass"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.uploadername}}</h2>
+        <h3>
+          <span class="spanMargin">
+            <b class="clrClass">वर्ग : </b>{{ item.className }}</span
+          >
+          <span><b class="clrClass">विषय : </b>{{item.subjectName}} </span>
+        </h3>
+        <p>{{item.subject}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
