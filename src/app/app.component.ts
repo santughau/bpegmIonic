@@ -32,6 +32,11 @@ export class AppComponent implements OnInit {
       url: "/gr",
       icon: "document",
     },
+    {
+      title: "शालये  पाठ्य पुस्तके  ",
+      url: "/pdf-list",
+      icon: "document",
+    },
   ];
   public labels = ["Family", "Friends", "Notes", "Work", "Travel", "Reminders"];
 

@@ -18,16 +18,28 @@ const routes: Routes = [
       import("./pages/home/home.module").then((m) => m.HomePageModule),
   },
   {
-    path: 'bpegm-details',
-    loadChildren: () => import('./pages/bpegm-details/bpegm-details.module').then( m => m.BpegmDetailsPageModule)
+    path: "bpegm-details",
+    loadChildren: () =>
+      import("./pages/bpegm-details/bpegm-details.module").then(
+        (m) => m.BpegmDetailsPageModule
+      ),
   },
   {
-    path: 'youtube',
-    loadChildren: () => import('./pages/youtube/youtube.module').then( m => m.YoutubePageModule)
+    path: "youtube",
+    loadChildren: () =>
+      import("./pages/youtube/youtube.module").then((m) => m.YoutubePageModule),
   },
   {
-    path: 'gr',
-    loadChildren: () => import('./pages/gr/gr.module').then( m => m.GrPageModule)
+    path: "gr",
+    loadChildren: () =>
+      import("./pages/gr/gr.module").then((m) => m.GrPageModule),
+  },
+  {
+    path: "pdf-list",
+    loadChildren: () =>
+      import("./pages/pdf-list/pdf-list.module").then(
+        (m) => m.PdfListPageModule
+      ),
   },
 ];
 
